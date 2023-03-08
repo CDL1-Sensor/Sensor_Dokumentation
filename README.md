@@ -6,3 +6,9 @@ In diesem Repository erfolgt die Dokumentation der Challenge
 
 # Datenerfassung
 - wie Wurden daten erfasst? 
+- Erstellt ein Konzept zur Datensammlung 
+- Führt die Datensammlung so aus, dass die Datenqualität stimmt
+- Prüft die Qualität der Daten
+- Speichert die Daten in geeigneter Form und kann die Wahl begründen
+
+
