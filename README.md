@@ -57,6 +57,12 @@ Da bei der Modellierung wir alle Smartphone Modelle berücksichgt haben, sollte 
 
 # Machine Learning Modelle
 
+## Logistische Regression - Baseline Modell
+
+Als Baseline Modell haben wir eine Logsitische Regression genommen, die mehrere Klassen vorhersagen kann.
+Beim Baseline Modell wurden die Rohdaten, sprich unverarbeitet eingelesen und der Datensatz aufgrund der niedrigsten Anzahl vorhandenem Bewegungsprofil gleichmässig gesampelt. Der Grund für diese Verarbeitung ist, dass wir als Optimierungsmetrik die Accuracy haben. Anschliessend wurden die Daten in Trainings und Validierungsdaten aufgesplittet in einem Verhältnis von 80:20. Anschliessend wurde das Logistische Modell trainiert und mittels den Validierungsdaten evaluiert, sprich die Accaurcy sowie die Confusion Matrix berechnet und geplottet. 
+
+
 - Decision Tree
 - Random Forest
 - KNN 
