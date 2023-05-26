@@ -179,13 +179,10 @@ Bitte folgende Anleitung folgen für Installation, muss zwingend Python 3.6 sein
 from: C:\Users\super\OneDrive\Dokumente\GitHub\Mobile_Frontend\Sensor_Klassifikation-mit-Deep-Learning\saved_model\sensor_model.h5
 to: C:\Users\super\OneDrive\Dokumente\GitHub\Mobile_Frontend\Sensor_Klassifikation-mit-Deep-Learning\saved_model\jsModel
 
-{% note %}
-
-**Ersetzten sie**: 
+:warning: **Ersetzten sie**: 
 C:\Users\super\OneDrive\Dokumente\GitHub\Mobile_Frontend\Sensor_Klassifikation-mit-Deep-Learning\
 Mit ihrem Repository prefix:
 <Repo>\saved_model\sensor_model.h5
-{% endnote %}
 
 
 https://www.npmjs.com/package/@tensorflow/tfjs-converter
