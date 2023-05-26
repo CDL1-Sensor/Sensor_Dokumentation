@@ -172,9 +172,9 @@ const predictData = async () => {
 
 # Export von Deep Learning Modell für Json Model in Tensorflow JS:
 Wir konvertieren unsere Models manuell, da die bin Files nicht mittels Json Model convertiert werden können.
-- Wir benutzten den Command: tensorflowjs_wizard
+- Wir benutzten den Command: **tensorflowjs_wizard**
 
-Bitte folgende Anleitung folgen für Installation, muss zwingend Python 3.6 sein.
+:warning: Bitte folgende Anleitung folgen für Installation, muss zwingend Python 3.6 sein.
 
 from: C:\Users\super\OneDrive\Dokumente\GitHub\Mobile_Frontend\Sensor_Klassifikation-mit-Deep-Learning\saved_model\sensor_model.h5
 to: C:\Users\super\OneDrive\Dokumente\GitHub\Mobile_Frontend\Sensor_Klassifikation-mit-Deep-Learning\saved_model\jsModel
@@ -187,7 +187,7 @@ Mit ihrem Repository prefix:
 
 https://www.npmjs.com/package/@tensorflow/tfjs-converter
 
-example:
+used cli commands:
 tensorflowjs_wizard
 
 Welcome to TensorFlow.js Converter.
