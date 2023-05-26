@@ -80,6 +80,94 @@ Beim Baseline Modell wurden die Rohdaten, sprich unverarbeitet eingelesen und de
 ---
 
 
+# Mobile App / Frontend Tensorflowjs:
+- Repo : https://github.com/CDL1-Sensor/Mobile-Frontend
+**Installation** siehe Readme.md
+## Reactivity:
+Es wird auf folgende Javascript Objects reactive reagiert.
+``` js
+watch(
+  () => ({
+    alpha: orientation.alpha,
+    beta: orientation.beta,
+    gamma: orientation.gamma,
+    x: motion.acceleration?.x,
+    y: motion.acceleration?.y,
+    z: motion.acceleration?.z,
+    gx: motion.accelerationIncludingGravity?.x,
+    gy: motion.accelerationIncludingGravity?.y,
+    gz: motion.accelerationIncludingGravity?.z,
+    rx: motion.rotationRate?.alpha,
+    ry: motion.rotationRate?.beta,
+    rz: motion.rotationRate?.gamma,
+  }),
+ ```
+## DataCreation:
+Hier werden die Daten so transformiert, damit sie mit dem Deeplearning Model übereinstimmen, sprich mit Window und Stepsize erstellt (im Tensor).
+``` js
+const createData = () => {
+  const window_size = 400;
+  const step_size = 100;
+  const X = measurments.value.map((value) => [
+    value.alpha || 0,
+    value.beta || 0,
+    value.gamma || 0,
+    value.x || 0,
+    value.y || 0,
+    value.z || 0,
+    value.gx || 0,
+    value.gy || 0,
+    value.gz || 0,
+    value.rx || 0,
+    value.ry || 0,
+    value.rz || 0,
+  ]);
+
+  // Create a sliding window of X with the specified window and step sizes
+  const X_windows = [];
+  for (let i = 0; i <= X.length - window_size; i += step_size) {
+    const window = X.slice(i, i + window_size);
+    X_windows.push(window);
+  }
+  // Reshape X_windows to 3D format (samples, timesteps, features)
+  const samples = X_windows.length;
+  const timesteps = X_windows[0].length;
+  const features = X_windows[0][0].length;
+  const reshapedX_windows = tf
+    .tensor(X_windows)
+    .reshape([samples, timesteps, features]);
+  return reshapedX_windows;
+};
+```
+
+## Prediction:
+Hier wird nun das Model importiert und mittels den X_window Objects die acitivites predicted.
+Und anschliessend wird ein Alert Fenster augegeben und predicted.
+
+``` js
+const predictData = async () => {
+  const model = await importModel();
+  debugger;
+  const X_widow = createData();
+
+  const res = await model.predict(X_widow);
+  alert(res);
+  // [laufen, rennen, sitzen, stehen, treppenlaufen, velofahren]
+  const labels = [
+    "laufen",
+    "rennen",
+    "sitzen",
+    "stehen",
+    "treppenlaufen",
+    "velofahren",
+  ];
+  const index = res.argMax(1).dataSync()[0];
+  const label = labels[index];
+  alert(label);
+  };
+```
+
+
 # Export von Deep Learning Modell für Json Model in Tensorflow JS:
 Wir konvertieren unsere Models manuell, da die bin Files nicht mittels Json Model convertiert werden können.
 - Wir benutzten den Command: tensorflowjs_wizard
