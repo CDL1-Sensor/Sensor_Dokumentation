@@ -143,6 +143,8 @@ const createData = () => {
 ## Prediction:
 Hier wird nun das Model importiert und mittels den X_window Objects die acitivites predicted.
 Und anschliessend wird ein Alert Fenster augegeben und predicted.
+Im Res ist jeweils ein Tensor mit den jeweiligen Probablities der Acitivtäten.
+Das label ist klartext die Activity die am meisten Vorgeschlagen wurde.
 
 ``` js
 const predictData = async () => {
