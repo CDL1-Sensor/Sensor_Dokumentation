@@ -100,22 +100,22 @@ example:
 tensorflowjs_wizard
 
 Welcome to TensorFlow.js Converter.
-? Please provide the path of model file or the directory that contains model files.
+- ? Please provide the path of model file or the directory that contains model files.
 If you are converting TFHub module please provide the URL.  C:\Users\super\OneDrive\Dokumente\GitHub\Mobile_Frontend\Sensor_Klassifikation-mit-Deep-Learning\saved_ 
 model\sensor_model.h5
-? What is your input model format? (auto-detected format is marked with *)  Keras (HDF5) *
-? What is your output format?  TensoFlow.js Layers Model
-? Do you want to compress the model? (this will decrease the model precision.)  No compression (Higher accuracy)
-? Please enter shard size (in bytes) of the weight files?  4194304
-? Do you want to split weights by layers?  Yes
-? Do you want to provide metadata?
-Provide your own metadata in the form:
-metadata_key:path/metadata.json
-Separate multiple metadata by comma.
-? Which directory do you want to save the converted model in?  C:\Users\super\OneDrive\Dokumente\GitHub\Mobile_Frontend\Sensor_Klassifikation-mit-Deep-Learning\sav 
+- ? What is your input model format? (auto-detected format is marked with *)  Keras (HDF5) *
+- ? What is your output format?  TensoFlow.js Layers Model
+- ? Do you want to compress the model? (this will decrease the model precision.)  No compression (Higher accuracy)
+- ? Please enter shard size (in bytes) of the weight files?  4194304
+- ? Do you want to split weights by layers?  Yes
+- ? Do you want to provide metadata?
+- Provide your own metadata in the form: <br>
+metadata_key:path/metadata.json <br>
+Separate multiple metadata by comma. <br>
+- ? Which directory do you want to save the converted model in?  C:\Users\super\OneDrive\Dokumente\GitHub\Mobile_Frontend\Sensor_Klassifikation-mit-Deep-Learning\sav 
 ed_model\jsModel
-? The output already directory exists, do you want to overwrite it?  Yes
-converter command generated:
+- ? The output already directory exists, do you want to overwrite it?  Yes
+converter command generated: <br>
 tensorflowjs_converter --input_format=keras --metadata= --output_format=tfjs_layers_model --split_weights_by_layer --weight_shard_size_bytes=4194304 C:\Users\super\OneDrive\Dokumente\GitHub\Mobile_Frontend\Sensor_Klassifikation-mit-Deep-Learning\saved_model\sensor_model.h5 C:\Users\super\OneDrive\Dokumente\GitHub\Mobile_Frontend\Sensor_Klassifikation-mit-Deep-Learning\saved_model\jsModel
 
 
@@ -137,7 +137,7 @@ group8-shard1of1.bin                2560800
 group9-shard1of1.bin                80400
 model.json                          10727
 Total size:                         2703399
-
+<br><br>
 
 - Führt die Datensammlung so aus, dass die Datenqualität stimmt
 - Prüft die Qualität der Daten
