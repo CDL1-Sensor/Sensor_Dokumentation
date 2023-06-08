@@ -69,7 +69,7 @@ Beim Baseline Modell wurden die Rohdaten, sprich unverarbeitet eingelesen und de
 
 
 - Decision Tree
-- Random Forest
+
 Für das Random Forest-Modell wurden verschiedene Modellparameter untersucht und optimiert. Mithilfe von Weights and Bias wurden insgesamt 3609 Modelle trainiert, indem verschiedene Kombinationen von Parametern traniert wurden. Durch verschiedene Kürzungen und Anpassungen wurde das beste Modell ausgewählt. Dabei stellte sich heraus, dass auch das beste Modell des Random Forest stark vom Random State abhängig ist. Trotz dieser Abhängigkeit wurde es als eines der besten Modelle identifiziert.
 
 Ähnlich wie bei den anderen Modellen wurde auch hier die Konfusionsmatrix berechnet und geplottet, um eine bessere Übersicht über die Leistung des Modells zu erhalten.
