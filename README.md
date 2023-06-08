@@ -63,14 +63,17 @@ Da bei der Modellierung wir alle Smartphone Modelle berücksichgt haben, sollte 
 
 Als Baseline Modell haben wir eine Logsitische Regression genommen, die mehrere Klassen vorhersagen kann. 
 In Sklearn wird die multiclass Logistische Regression durch das One-vs-Rest-Schema (auch als One-vs-All-Schema bezeichnet) implementiert. Das bedeutet, dass die Logistische Regression für jede Klasse eine separate binäre Klassifikation durchführt, indem sie die eine Klasse gegen alle anderen Klassen klassifiziert. Das Ergebnis dieser binären Klassifikationen wird dann kombiniert, um die endgültige multiklassifizierte Vorhersage zu erzeugen.
-Beim Baseline Modell wurden die Rohdaten, sprich unverarbeitet eingelesen und der Datensatz aufgrund der niedrigsten Anzahl vorhandenem Bewegungsprofil gleichmässig gesampelt. Der Grund für diese Verarbeitung ist, dass wir als Optimierungsmetrik die Accuracy haben. Anschliessend wurden die Daten in Trainings und Validierungsdaten aufgesplittet in einem Verhältnis von 80:20. Anschliessend wurde das Logistische Modell trainiert und mittels den Validierungsdaten evaluiert, sprich die Accaurcy sowie die Confusion Matrix berechnet und geplottet. 
+Beim Baseline Modell wurden die Rohdaten, sprich unverarbeitet eingelesen und der Datensatz aufgrund der niedrigsten Anzahl vorhandenem Bewegungsprofil gleichmässig gesampelt. Der Grund für diese Verarbeitung ist, dass wir als Optimierungsmetrik die Accuracy haben. Anschliessend wurden die Daten in Trainings und Validierungsdaten aufgesplittet in einem Verhältnis von 80:20. Anschliessend wurde das Logistische Modell trainiert und mittels den Validierungsdaten evaluiert, sprich die Accaurcy sowie die Konfusionsmatrix berechnet und geplottet. 
 
 (Plots und Bilder vom Notebook hinzufuegen)
 
 
 - Decision Tree
 - Random Forest
+Für das Random Forest-Modell wurden verschiedene Modellparameter untersucht und optimiert. Mithilfe von Weights and Bias wurden insgesamt 3609 Modelle trainiert, indem verschiedene Kombinationen von Parametern traniert wurden. Durch verschiedene Kürzungen und Anpassungen wurde das beste Modell ausgewählt. Dabei stellte sich heraus, dass auch das beste Modell des Random Forest stark vom Random State abhängig ist. Trotz dieser Abhängigkeit wurde es als eines der besten Modelle identifiziert.
 
+Ähnlich wie bei den anderen Modellen wurde auch hier die Konfusionsmatrix berechnet und geplottet, um eine bessere Übersicht über die Leistung des Modells zu erhalten.
+TODO: Bild von Konfusionmatrix rein.
 
 - KNN 
 - Kluster Algorithmen (K-Means, Dbscan)
