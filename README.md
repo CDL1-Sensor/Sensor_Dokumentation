@@ -57,6 +57,16 @@ Smartphones die tendenziell moderner und teuer sind, sind entsprechend besser au
 Da bei der Modellierung wir alle Smartphone Modelle berücksichgt haben, sollte dies zu keinen Problemen bei den Validierungsdaten oder Testdaten führen. 
 
 
+# Backend App
+
+- Das Backend wird nur für React Native verwendet (Experimental):
+https://github.com/CDL1-Sensor/activity_frontend
+
+- Für das Produktive https://github.com/CDL1-Sensor/Mobile-Frontend wird local Tensorflow JS verwendet.
+
+Repo (Backend):
+https://github.com/CDL1-Sensor/Backend_App
+
 # Machine Learning Modelle
 
 ## Logistische Regression - Baseline Modell
@@ -82,14 +92,66 @@ TODO: Bild von Konfusionmatrix rein.
 
 # Deep Learning Modelle
 
+Repo: https://github.com/CDL1-Sensor/Sensor_Klassifikation-mit-Deep-Learning
+Exported Model: https://github.com/CDL1-Sensor/Sensor_Klassifikation-mit-Deep-Learning/tree/main/saved_model/sensor_model
+
+
+
 - CNN mit aggregierten Daten
 - CNN mit Sensorblider Daten
+
+### Auswertung:
+
+
+
+### Bestes Modell:
+``` python
+def create_model_1(name="model_1"):
+    '''
+    CNN Model with 1 Convolutional Layer, 1 LSTM Layer and 1 Dense Layer 
+    '''
+    model = tf.keras.Sequential(
+        [
+            # Add a 1D convolutional layer
+            tf.keras.layers.Conv1D(
+                filters=64,
+                kernel_size=12,
+                activation="relu",
+                padding="same",
+                input_shape=(timesteps, n_features),
+                kernel_regularizer=tf.keras.regularizers.l2(0.01),
+            ),
+            # Add LSTM layer
+            tf.keras.layers.LSTM(100),
+            # Add a dense output layer
+            tf.keras.layers.Dense(
+                6, activation="softmax"
+            ),  # Change activation function based on the nature of the output
+        ],
+        name=name,
+    )
+    model.compile(
+        optimizer="adam",
+        loss="categorical_crossentropy",
+        metrics=["accuracy", tf.keras.metrics.Precision(), tf.keras.metrics.Recall()],
+    )
+    return model
+
+```
+
+### Klassifikations Matrix Bestes Modell:
+
+![Alt text](image.png)
+
+
+
 
 ---
 
 
 # Mobile App / Frontend Tensorflowjs:
 - Repo : https://github.com/CDL1-Sensor/Mobile-Frontend
+- URL: https://activity-recognition.netlify.app
 **Installation** siehe Readme.md
 ## Reactivity:
 Es wird auf folgende Javascript Objects reactive reagiert.
@@ -117,18 +179,18 @@ const createData = () => {
   const window_size = 400;
   const step_size = 100;
   const X = measurments.value.map((value) => [
-    value.alpha || 0,
-    value.beta || 0,
-    value.gamma || 0,
     value.x || 0,
     value.y || 0,
     value.z || 0,
-    value.gx || 0,
-    value.gy || 0,
-    value.gz || 0,
     value.rx || 0,
     value.ry || 0,
     value.rz || 0,
+    0 || 0, //-> Magnetometer nicht unterstützt in PWA
+    0 || 0, //-> Magnetometer nicht unterstützt in PWA
+    0 || 0, //-> Magnetometer nicht unterstützt in PWA
+    value.alpha || 0,
+    value.beta || 0,
+    value.gamma || 0,
   ]);
 
   // Create a sliding window of X with the specified window and step sizes
@@ -242,3 +304,5 @@ Total size:                         2703399
 - Prüft die Qualität der Daten
 
 
+## Vergleich Deep Learning mit Machine Learning 
+[[todo]]
