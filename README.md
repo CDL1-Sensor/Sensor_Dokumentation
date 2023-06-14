@@ -95,10 +95,22 @@ TODO: Bild von Konfusionmatrix rein.
 Repo: https://github.com/CDL1-Sensor/Sensor_Klassifikation-mit-Deep-Learning
 Exported Model: https://github.com/CDL1-Sensor/Sensor_Klassifikation-mit-Deep-Learning/tree/main/saved_model/sensor_model
 
+Tabellarische Auflistung aller DL-Modelle und deren Parameter
 
+| DL-Modell | Anzahl CNN Layer | CNN Filter Size | Kernel Size | Aktivierungsfunktion | L2-Regularisierung | Dropout | Anzahl LSTM Layer | LSTM Neuronen | Anzahl Dense Layer | Dense Neuronen | 
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 01 | 1 | 64 | 2 | relu | 0.01 | - | 1 | 100 | 1 | 6 | 
+| 02 | 1 | 64 | 4 | relu | 0.01 | 0.2 | 1 | 100 | 1 | 6 |  
+| 03 | 1 | 32 | 2 | relu | 0.01 | - | 1 | 100 | 1 | 6 | 
+| 04 | 1 | 64 | 2 | relu | 0.01 | - | 1 | 100 | 1 | 6 | 
+| 05 | 3 | (32,20,10) | 2 | relu | 0.01 | - | - | - | 3 | (180,100,6) | 
+| 06 | 2 | (64,32) | 2 | relu | 0.01 | - | - | - | 4 | (200,100,50,6) | 
+| 07 | 5 | (64,64,64,64,64) | 2 | relu | 0.05 | - | - | - | 6 | (200,150,100,50,25,6)
 
-- CNN mit aggregierten Daten
-- CNN mit Sensorblider Daten
+Bestes Model nach Metriken: Model 2
+Bestes Model nach Evalutations Daten: Model 1
+
+[[todo]]: Unterschiede erklären von verschiednen Modellen
 
 ### Auswertung:
 
