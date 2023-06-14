@@ -107,7 +107,7 @@ Tabellarische Auflistung aller DL-Modelle und deren Parameter
 | 06 | 2 | (64,32) | 2 | relu | 0.01 | - | - | - | 4 | (200,100,50,6) | 
 | 07 | 5 | (64,64,64,64,64) | 2 | relu | 0.05 | - | - | - | 6 | (200,150,100,50,25,6)
 
-Bestes Model nach Metriken: Model 2
+Bestes Model nach Metriken: Model 3 berechnung: prec + recall + acc
 Bestes Model nach Evalutations Daten: Model 1
 
 [[todo]]: Unterschiede erklären von verschiednen Modellen
