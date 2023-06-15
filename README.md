@@ -316,3 +316,6 @@ Total size:                         2703399
 - Führt die Datensammlung so aus, dass die Datenqualität stimmt
 - Prüft die Qualität der Daten
 
+# Lesson Learned
+Fuer das Deeplearning Model, hat es zu wenig Daten um allgemein auf neue Personen zu schliessen,
+die das Modell noch nie gesehen hat im training.
