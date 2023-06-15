@@ -5,10 +5,10 @@ In diesem Repository erfolgt die Dokumentation der Challenge
 Diese Challenge wurde von: Lea Bütler, Manjavy Kirupa, Etienne Roulet und Si Ben Tran bearbeitet.
 Dieses README dient als eine Zusammenfassung aller Arbeiten die im Rahmen dieser Challenge gemacht wurden. Die detailierten Dokumentationen befinden sich in den jeweiligen Notebooks oder README vom entsprechenden Repository und werden hier immer wieder weiter verlinkt. 
 
-# Einleitung
+## Einleitung
 In heutiger Zeit verwenden nahezu alle Personen ein Smartphone, welches mit Beschleunigungs- und Rotationssensoren ausgestattet ist. Ziel dieser Challenge ist es, Bewegungsprofile aus den Daten dieser Sensoren zu identifizieren und durch Verwendung von Machine-Learning-Modellen zu klassifizieren. In dieser Challenge werden sechs verschiedene Bewegungsprofile erfasst und die Sensordaten werden in einem geeigneten Format verarbeitet, um Machine-Learning- sowie Deep-Learning-Modelle zu erstellen. Bei der Verarbeitung der Daten ist es wichtig, das definierte Zeitfenster zu berücksichtigen und darauf zu achten, dass kein "Data Leakage" zwischen den Trainings- und Testdatensätzen stattfindet. Um eine hohe Accuracy Metrik für die Klassifikation zu erreichen, müssen die Modelle durch verschiedene Methoden, wie beispielsweise der Cross-Validation, optimiert werden. Dadurch kann das Ziel einer Accuracy von mehr als 0.9 erreicht werden. 
 
-# Datenerfassung
+## Datenerfassung
 Die Datenerfassung wurde im Plenum, gruppenübergreifend am 23.02.2023 besprochen. Dabei wurden sechs Bewegungsprofile sowie ein gemeinsames [Konzept zur Datenaufnahme](https://github.com/CDL1-Sensor/Sensor_Dokumentation/tree/master/Datenerhebung) zur Datenaufnahme definiert. 
 
 Nachfolgend werden die sechs Bewegsungsprofilen aufgelistet. 
@@ -27,7 +27,7 @@ Bemerkungen zu den Bewegungsprofilen
 - Mit Rennen ist kein Vollsprint gemeint, sondern joggen in unterschiedliche Geschwindigkeiten
 - In unserer Gruppe wurden nur .json Dateien berücksichtigt
 
-# Datenverarbeitung 
+## Datenverarbeitung 
 Nachdem eine [Datenpipeline](https://github.com/CDL1-Sensor/Sensor_Data-Wrangling-und-EDA/tree/master/data_ingestion) erstellt wurde, die uns die aufgenommenen Sensordaten in ein Polardataframe überführt hat, haben wir festgestellt, dass die unterschiedlichen Sensoren, unterschiedlich Startpunkte der Messungeen haben und uns somit viele NA Werte geliefert hat. 
 
 Als Beispiel des Problems hier ein kleiner Beispielausschnitt vom DataFrame.   
@@ -43,7 +43,7 @@ Die Aggregation erfolgte indem die Daten jeweils in 5 Sekunden Zeitfenster aggre
 Um die Daten für das Machine Learning zu brauchen, wurden diese preprocessed. Dabei wurden die Daten hauptsächlich in Train und Validation Set gesplittet. Zunächst wurden mit undersampling oder oversampling die Test sowie Validierungsdaten anhand von Plots verglichen. 
 
 
-# Explorative Datenanalyse
+## Explorative Datenanalyse
 
 Gesammthaft wurden 303 Mesuungen gemacht.
 
@@ -57,7 +57,7 @@ Smartphones die tendenziell moderner und teuer sind, sind entsprechend besser au
 Da bei der Modellierung wir alle Smartphone Modelle berücksichgt haben, sollte dies zu keinen Problemen bei den Validierungsdaten oder Testdaten führen. 
 
 
-# Backend App
+## Backend App
 
 - Das Backend wird nur für React Native verwendet (Experimental):
 https://github.com/CDL1-Sensor/activity_frontend
@@ -67,9 +67,9 @@ https://github.com/CDL1-Sensor/activity_frontend
 Repo (Backend):
 https://github.com/CDL1-Sensor/Backend_App
 
-# Machine Learning Modelle
+## Machine Learning Modelle
 
-## Logistische Regression - Baseline Modell
+### Logistische Regression - Baseline Modell
 
 Als Baseline Modell haben wir eine Logsitische Regression genommen, die mehrere Klassen vorhersagen kann. 
 In Sklearn wird die multiclass Logistische Regression durch das One-vs-Rest-Schema (auch als One-vs-All-Schema bezeichnet) implementiert. Das bedeutet, dass die Logistische Regression für jede Klasse eine separate binäre Klassifikation durchführt, indem sie die eine Klasse gegen alle anderen Klassen klassifiziert. Das Ergebnis dieser binären Klassifikationen wird dann kombiniert, um die endgültige multiklassifizierte Vorhersage zu erzeugen.
@@ -90,7 +90,7 @@ TODO: Bild von Konfusionmatrix rein.
 - Neuronale Netze
 
 
-# Deep Learning Modelle
+## Deep Learning Modelle
 
 Repo: https://github.com/CDL1-Sensor/Sensor_Klassifikation-mit-Deep-Learning
 Exported Model: https://github.com/CDL1-Sensor/Sensor_Klassifikation-mit-Deep-Learning/tree/main/saved_model/sensor_model
