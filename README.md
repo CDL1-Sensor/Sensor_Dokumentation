@@ -123,12 +123,88 @@ Tabellarische Auflistung aller DL-Modelle und deren Parameter
 | 06 | 2 | (64,32) | 2 | relu | 0.01 | - | - | - | 4 | (200,100,50,6) | 
 | 07 | 5 | (64,64,64,64,64) | 2 | relu | 0.05 | - | - | - | 6 | (200,150,100,50,25,6)
 
+Baseline Model:
+``` python
+# Baseline Model
+def create_baseline_model(name="baseline_model"):
+    model = tf.keras.Sequential(
+        [
+            tf.keras.layers.Flatten(input_shape=(timesteps, n_features)),
+            tf.keras.layers.Dense(6, activation="softmax")
+        ],
+        name=name
+    )
+    model.compile(
+        optimizer="adam",
+        loss="categorical_crossentropy",
+        metrics=["accuracy", tf.keras.metrics.Precision(), tf.keras.metrics.Recall()]
+    )
+    return model
+```
+
 Bestes Model nach Metriken: Model 3 berechnung: prec + recall + acc
 Bestes Model nach Evalutations Daten: Model 1
 
 [[todo]]: Unterschiede erklären von verschiednen Modellen
 
+
+### Hyperparameter optimierung
+
+#### Manuelle Hyperparameter Optimierung:
+Einige Hyperparameter wurden Manuell bestummen, da das training der Daten bereits zeitlich intensive ist mit den gefundenen best Werten.
+
+1. Window size
+Versuche:
+  window_size = 100
+  window_size = 200
+  window_size = 400
+Als bester Wert wurde manuell in verschiedenen Jupyter Notebooks Experimentell bestummen
+<br>
+2. Step size
+Versuche: 
+  step_size = 100
+  step_size = 50
+  step_size = 10
+Als bester Wert wurde in den Experimenten als 10 festgelegt.
+Bei den anderen Werten, war das overfitting der Daten sehr fortgeschritten, so wurde bei der 100 stepsize bei der Validation der unseen Data nur ~3 Klassen richtig klassifizert.
+<br>
+3. Batch_size
+Versuche:
+  batch_size = 128
+  batch_size = 64
+  batch_size = 32
+Es wurde 64 genommen, da mit der RTX 3080 GPU die beste Performance erreicht werden konnte.
+<br>
+4. data_augmentation
+Versuche:
+  on = true
+  on = false
+Schlussendlich wurde das Data Augumentation nicht verendet da es den Trainingsprozess extrem in die länge zieht und nur ein kleiner Gewinn dabei war. (Zeitgründe)
+<br>
+5. Epochen
+Versuche:
+  epochs = 6
+  epochs = 10
+  epochs = 20
+  epochs = 25
+Ab 20 Epochen wurde der Aufwand zu gross für den marginalen Gewinn.
+
+#### Automatisierte Hyperparameter Optimierung:
+Es wurden 7 Modelle erstellt plus Baseline (siehe Tabelle oben). Mit jeweils 2 verschiedenen Architekturen (CNN/ CNN&LSTM). 
+
+Dabei wurde folgende Hyperparameter beachtet:
+- Filtersize
+- kernel_size
+- padding
+- kernel_regularizer
+- LSTM
+
 ### Auswertung:
+Das grosse Problem der Daten ist, dass es zu wenige Daten gibt um allgemein klassfiziern zu können. Neue ganze Messreihen, die noch nie von dem Model trainiert wurden können meist nicht klassifizert werden und wir overfitten zu stark auf die beschränkten Daten die wir haben. Wir müssten mehr Diversität in den Daten haben, mehr Personen, verschiedene Handys. Denn schon Hosen machen einen Unterschied, beispielsweise bei Jeans, ist das Handy immer statisch am Körper. Hat man eine lockere Sporthose an, so bewegt sich das Handy extreme in der Hose.
+Um bessere Klassifikation machen zu können benötigt es scheinbar weitaus mehr Daten als wir aufgenommen hatten. Für die Validation wurden die Daten auch etwas knapp. Denn wir mussten ganze Messversuche haben, die noch nie mit dem Modell in berührung kamen. Hätte man mehr Daten, könnte man die auch beim Trainieren direkt verwenden --> Train, Test, Validation Split.
+
+Dennoch konnten wir mit etlichen Modellen ein einigermassen gutes Modell aufstellen, dass auch auf Allgemeine Daten reagieren kann.
+
 
 
 
