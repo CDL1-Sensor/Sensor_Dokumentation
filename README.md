@@ -181,7 +181,8 @@ Jedoch, wenn man sich die komplett ungesehenen Daten nimmt (siehe Notebook: http
 
 Nur das Repo im Account etiiiR wird mittels CI/CD Pipeline automatisch mittels Git Pushes auf Netlify Deployed. <br>
 Dies hat den Zweck, dass das Repo per Fork jeweils resynced wird um einen Deploy zumachen.
-
+Damit kann es verhindert werden, ohne Github Lizenz, nicht in das Prod zu pushen.
+Was die Fehler anfaelligkeit minimiert.
 **Installation** siehe Readme.md
 ## Reactivity:
 Es wird auf folgende Javascript Objects reactive reagiert.
