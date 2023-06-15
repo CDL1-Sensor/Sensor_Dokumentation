@@ -205,8 +205,11 @@ Um bessere Klassifikation machen zu können benötigt es scheinbar weitaus mehr 
 
 Dennoch konnten wir mit etlichen Modellen ein einigermassen gutes Modell aufstellen, dass auch auf Allgemeine Daten reagieren kann.
 
-
-
+### Tensorboard
+run Tenorboard with:
+``` bash
+tensorboard --logdir logs
+```
 
 ### Bestes Modell:
 ``` python
