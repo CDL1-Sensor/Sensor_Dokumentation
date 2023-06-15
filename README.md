@@ -8,6 +8,22 @@ Dieses README dient als eine Zusammenfassung aller Arbeiten die im Rahmen dieser
 ## Einleitung
 In heutiger Zeit verwenden nahezu alle Personen ein Smartphone, welches mit Beschleunigungs- und Rotationssensoren ausgestattet ist. Ziel dieser Challenge ist es, Bewegungsprofile aus den Daten dieser Sensoren zu identifizieren und durch Verwendung von Machine-Learning-Modellen zu klassifizieren. In dieser Challenge werden sechs verschiedene Bewegungsprofile erfasst und die Sensordaten werden in einem geeigneten Format verarbeitet, um Machine-Learning- sowie Deep-Learning-Modelle zu erstellen. Bei der Verarbeitung der Daten ist es wichtig, das definierte Zeitfenster zu berücksichtigen und darauf zu achten, dass kein "Data Leakage" zwischen den Trainings- und Testdatensätzen stattfindet. Um eine hohe Accuracy Metrik für die Klassifikation zu erreichen, müssen die Modelle durch verschiedene Methoden, wie beispielsweise der Cross-Validation, optimiert werden. Dadurch kann das Ziel einer Accuracy von mehr als 0.9 erreicht werden. 
 
+### Projekt Management
+- Kanban ausformulieren todo
+
+## Herausforerung Datascience:
+- metriken doc
+- Deep learning
+- Machinelearning
+- weights and bias
+- todo
+
+## Langfristige Risiken
+- Overfitting
+- Datensammlung
+- Datenbereinigung
+- todo
+
 ## Datenerfassung
 Die Datenerfassung wurde im Plenum, gruppenübergreifend am 23.02.2023 besprochen. Dabei wurden sechs Bewegungsprofile sowie ein gemeinsames [Konzept zur Datenaufnahme](https://github.com/CDL1-Sensor/Sensor_Dokumentation/tree/master/Datenerhebung) zur Datenaufnahme definiert. 
 
@@ -330,3 +346,5 @@ todo
 ## Lesson Learned
 Fuer das Deeplearning Model, hat es zu wenig Daten um allgemein auf neue Personen zu schliessen,
 die das Modell noch nie gesehen hat im training.
+
+## Fazit / Schlussfolgerung
