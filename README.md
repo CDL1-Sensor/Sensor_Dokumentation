@@ -175,8 +175,13 @@ Jedoch, wenn man sich die komplett ungesehenen Daten nimmt (siehe Notebook: http
 
 
 # Mobile App / Frontend Tensorflowjs:
-- Repo : https://github.com/CDL1-Sensor/Mobile-Frontend
+- Repo Test: https://github.com/CDL1-Sensor/Mobile-Frontend
+- Repo Prod: https://github.com/etiiiR/Mobile-Frontend
 - URL: https://activity-recognition.netlify.app
+
+Nur das Repo im Account etiiiR wird mittels CI/CD Pipeline automatisch mittels Git Pushes auf Netlify Deployed. <br>
+Dies hat den Zweck, dass das Repo per Fork jeweils resynced wird um einen Deploy zumachen.
+
 **Installation** siehe Readme.md
 ## Reactivity:
 Es wird auf folgende Javascript Objects reactive reagiert.
