@@ -47,7 +47,7 @@ Um die Daten für das Machine Learning zu brauchen, wurden diese preprocessed. D
 
 Gesammthaft wurden 303 Mesuungen gemacht.
 
-Im [Notebook der explorativen Datenanalyse](https://github.com/CDL1-Sensor/Sensor_Data-Wrangling-und-EDA/blob/master/eda.ipynb) wurden vorallem Visualisierungen generiert und die Daten zu verstehen. Zu Beginn wurden die Anzahl Messungen pro Person und Bewegungsprofile geplottet. Danach wurden die Sensoren mit Boxplots dargestellt. Um mehr über einzelne User zu erfahren, haben wir Sensordaten zweier User verglichen. Zu guter letzt wurden auch alle Sensordaten anhand von Linienplots dargestellt. Dies jeweils für jeden Sensor einmal auf den unbearbeiteten Daten und einmal auf den getrimmten Daten.
+Im [Notebook der explorativen Datenanalyse](https://github.com/CDL1-Sensor/Sensor_Data-Wrangling-und-EDA/blob/master/eda.ipynb) wurden vorallem Visualisierungen generiert und die Daten zu verstehen. Zu Beginn wurden die Anzahl Messungen pro Person und Bewegungsprofile geplottet. Danach wurden die Sensoren mit Boxplots dargestellt. Um mehr über einzelne User zu erfahren, haben wir Sensordaten zweier User verglichen. Zu guter letzt wurden auch alle Sensordaten anhand von [Linienplots](https://github.com/CDL1-Sensor/Sensor_Data-Wrangling-und-EDA/tree/master/plots/raw-vs-trimmed) dargestellt. Dies jeweils für jeden Sensor einmal auf den unbearbeiteten Daten und einmal auf den getrimmten Daten.
 
 Weitere Einsichten gewannen wir indem wir ein pandasprofiling als Inspiration auf unsere Daten gemacht haben. Hierfür wurde ein separates [Notebook EDA pandansprofiling inspiration](https://github.com/CDL1-Sensor/Sensor_Data-Wrangling-und-EDA/blob/master/eda-pandasprofiling-inspiration.ipynb) generiert. 
 
@@ -55,7 +55,6 @@ Wichtig zu erwähnen ist, dass die Marke vom Handy durchaus einen Einfluss auf d
 Smartphones die tendenziell moderner und teuer sind, sind entsprechend besser ausgerüstet. 
 
 Da bei der Modellierung wir alle Smartphone Modelle berücksichgt haben, sollte dies zu keinen Problemen bei den Validierungsdaten oder Testdaten führen. 
-
 
 ## Backend App
 
