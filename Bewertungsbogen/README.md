@@ -6,38 +6,28 @@ Wir gehen hier in die Allgemeine Lernziele ein, beschreiben und verlinken dabei 
 
 ## Zentrale Aspekte und Konzepte der Domäne recherchieren, verstehen und erklären können 
 
-### Erläutert die zentralen Aspekte und Konzepte der Domäne mit Beispielen Nicht-Fachpersonen verständlich und kompetent 
-
-### Beschreibt, vergleicht und beurteilt Vor- und Nachteile von (aus der Literatur bekannten oder selbst entwickelten) Modellen in Bezug auf Nutzen und Zielsetzung innerhalb der Domäne 
-
-### Zeigt anhand von relevanten Beispielen mittels einer Fehleranalyse die Grenzen der Ausssagekraft des Modells in Bezug auf die Domäne auf 
+Das Domänverständnis wird durch das Repository [Sensor_Domaenverstaendnis](https://github.com/CDL1-Sensor/Sensor_Domaenverstaendnis) abgedeckt.   
+Im Readme sind alle wichtigen Aspekte und Konzepte der Domaene vorhanden und werden mit einer jeweiligen kurzen Beschreibung gegebenenfalls Beispielen erklaert.    
+Dieses Repo dient ebenfalls als Lern Transfer vom Team untereinander und auch als Vorbereitung der Challenge Verteidigung. 
 
 ## Vorhandene Daten und Resultate entsprechend der Domäne korrekt interpretieren, einordnen, erläutern und visualisieren und gegebenenfalls erweitern können
 
-### Visualisiert die Merkmale der Daten sinnvoll und zeigt im Modell auf, welchen Einfluss diese darin haben 
+Die Ueberpruefung der Qualitaet der selbst gesammelten Daten ist im Repository [Sensor_Data-Wrangling-und-EDA](https://github.com/CDL1-Sensor/Sensor_Data-Wrangling-und-EDA) vorhanden.   
+Einige der gesammelten Sensorddaten werden in diesem [Folder](https://github.com/CDL1-Sensor/Sensor_Data-Wrangling-und-EDA/tree/master/plots/raw-vs-trimmed) visualisiert.   
+Dort sind die Unterschiede von den Sensoredaten von Person zu Person deutlich zu erkennen. Auch den Einfluss des Trimmen ist dort zu sehen. 
+Weiter wurden die Sensoraten durch Aggregationen erweitert, diese ist im [data-wrangling](https://github.com/CDL1-Sensor/Sensor_Data-Wrangling-und-EDA/blob/master/data-wrangling.ipynb) Notebook zu finden. 
 
-### Überprüft die Qualität von selbst gesammelten oder erweiterten Daten, den Annotationsprozessen und/oder Datensammlungsprozessen. Hält die Lizenz der Daten fest und dokumentiert den Sammelprozess.
+## Fragestellung (und Zielsetzung) verstehen, klären & konkretisieren und gegebenenfalls anpassen/weiterentwickeln können
 
-
-## Fragestellung (und Zielsetzung) verstehen, klären & konkretisieren und gegebenenfalls anpassen/weiterentwick eln können
-
-### Erklärt Fragestellung und Zielsetzung der Aufgabenstellung in Bezug auf die Domäne Fach- und Nichtfachpersonen umfassend und kompetent 
-
-
-### Sucht im Verlaufe des Projektes gegebenenfalls zusätzliche Nutzenpotentiale und erweitert oder verändert die Zielsetzung entsprechend 
-
-### Berät Interessensvertreter bezüglich Weiterentwicklung/Anpassung der Fragestellung und diskutiert gegebenenfalls im Austausch mit den Interessenvertretern explorativ weitere offene Fragestellungen 
+Die Zielsetzung sowie Aufgabenstellung wurden in der [Planung und Konzeption](https://github.com/CDL1-Sensor/Sensor_Planung_Konzeption) konkretisiert.   
+Im Verlaufe der Challenge wurden zusätzlich weitere Metriken als nur die Accuracy in der Auswertung mit berücksichtigt. 
+(Siehe [ML-](https://github.com/CDL1-Sensor/Sensor-Klassifikation-ohne-Deep-Learning/blob/main/ML-Modelle.ipynb) und [DL-Notebook](https://github.com/CDL1-Sensor/Sensor_Klassifikation-mit-Deep-Learning/blob/main/DL-Modelle.ipynb))
 
 # Lösungsstrategien, Vorgehensweisen und Methoden
 
 ## Analyse der Fragestellung, Anforderungen und Risiken
 
-### Kann Vor- und Nachteile der Lösungsansätze umfassend und detailliert darlegen 
-
-### Kennt auf die Fragestellung bezogene, typische Herausforderungen von Data Science Projekten 
-
-### Erkennt langfristige Risiken (Verfügbarkeit von Daten, Sicherheit, Infrastruktur, etc) und formuliert sinnvolle Massnahmen, um diese zu minimieren 
-
+Ein grosses ist Risiko ist die Qualität der Daten. Damit das Risiko von schlechten Daten vermindert wird, wurde Gruppenübergreifend gemeinsam an einer [Policy](https://github.com/CDL1-Sensor/Sensor_Dokumentation/tree/master/Datenerhebung) der Datenerhebung erarbeitet. Im Verlaufe der Challenge wurde jedoch festgestellt, dass die Qualität der Smartphones ausschlaggebend für die Qualität der Daten sind. Entsprechend mussten wir uns mit den typischen Data Science herausforderung herumschlagen, dazu gehörte die Verarbeitung der Daten, die Modellierung und Nachvollziehbarkeit der Modelle sowie die Auswertung und das Fazit. Da wir ein vierer-Team sind ist auch hier die klare Struktur des Repository wichtig, damit es zu wenigen Merge-Konflikten kommt. Um dieses zu umgehen wurde vor der Challenge eine GitHub Organization erstellt mit den jeweiligen Repositoies. Dies ermöglichte uns einen Reibungslose Zusammenarbeit.
 
 ## Methodenkenntnisse und Transfer aus den Modulen
 
