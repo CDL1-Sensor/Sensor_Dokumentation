@@ -174,8 +174,8 @@ def create_baseline_model(name="baseline_model"):
 Bestes Model nach Metriken: Model 3 berechnung: prec + recall + acc
 Bestes Model nach Evalutations Daten: Model 1
 
-[[todo]]: Unterschiede erklären von verschiednen Modellen
-
+![Alt text](image.png)
+![Alt text](image-1.png)
 
 ### Hyperparameter optimierung
 
@@ -222,7 +222,7 @@ Ab 20 Epochen wurde der Aufwand zu gross für den marginalen Gewinn.
 Es wurden 7 Modelle erstellt plus Baseline (siehe Tabelle oben). Mit jeweils 2 verschiedenen Architekturen (CNN/ CNN&LSTM). 
 
 Dabei wurde folgende Hyperparameter beachtet:
-- Filtersize
+- filter_size
 - kernel_size
 - padding
 - kernel_regularizer
