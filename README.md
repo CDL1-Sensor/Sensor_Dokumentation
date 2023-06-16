@@ -122,7 +122,7 @@ Bei der Fehlerabschätzung hat sich jedoch herausgestellt, dass der Stochastic G
 
 ### Vergleich der ML Modelle
 
-Vergleichen wir alle unsere Machine Learning Modelle mit den erreichten Metriken sowie deren Fehlerabschätzung, so hat unser Random Forest Modell am besten performd. 
+Vergleichen wir alle unsere Machine Learning Modelle mit den erreichten Metriken sowie in Berücksichtigung der Fehlerabschätzung, so hat unser Random Forest Modell am besten performd. Aufgrund der Einschätzung die wir im [Konzept](https://github.com/CDL1-Sensor/Sensor_Planung_Konzeption) gemacht haben, so fällt unser Random Forest Modell in die Kategorie "Gut". 
 
 ![Alt text](images/image-10.png)
 
@@ -137,7 +137,7 @@ Weitere fehlgeschalegene ML Ansätze die wir ebenfalls versucht haben waren:
 
 ## Deep Learning Modelle
 
-Repo: https://github.com/CDL1-Sensor/Sensor_Klassifikation-mit-Deep-Learning
+Repo: https://github.com/CDL1-Sensor/Sensor_Klassifikation-mit-Deep-Learning   
 Exported Model: https://github.com/CDL1-Sensor/Sensor_Klassifikation-mit-Deep-Learning/tree/main/saved_model/sensor_model
 
 Tabellarische Auflistung aller DL-Modelle und deren Parameter
@@ -449,10 +449,26 @@ Total size:                         2703399
 - Prüft die Qualität der Daten
 
 ## Vergleich Machine Learning und Deep Learning
-todo
+
+Der Vergleich zwischen Machine Learning und Deep Learning gestaltet sich in unserem Fall schwierig.    
+Bei Machine Learning haben wir mit den aggregierten Daten trainiert und evaluiert, während    
+bei Deep Learning wir nur die getrimmten Daten verwendet haben zum trainieren und evaluieren. 
+
+Wir stellten fest, dass die Implementation von Machine Learning Modellen sowie deren Auswertung sich einfacher gestaltet und weniger Ressourcen sowie Zeit für das Trainieren benötigt. 
+
+Bei Deep Learning benötigten wir einerseits mehr Ressourcen und auch mehr Zeit um die implementierten Modelle zu trainieren und zu evaluieren. Jedoch konnten wir feststellen, dass wir beim Testdatensatz in Deep Learning bessere Resultate erzielt haben als bei Machine Learning.
+
+Es ist somit ein Tradeoff zwischen einem besseren Test Accuracy und der vorhandenen Ressourcen die man hat. 
+
 
 ## Lesson Learned
-Fuer das Deeplearning Model, hat es zu wenig Daten um allgemein auf neue Personen zu schliessen,
-die das Modell noch nie gesehen hat im training.
+
+Es gibt viele Lesson Learned die wir durch die Challenge mitnehmen werden für die nächste Challenge im nächsten Semester. Diese fängt an bei der allgemeinen Infrakstruktur des GitHub Organisation. Hier wäre es sinnvoller einfachere Repository Namen zu wählen und auch diese sinnvoller oder besser zu unterteilen, um die Anzahl an Repository nicht unnötig zu erhöhen. Auch ein wichtiger Punkt, den wir bei der Modellierung unserer Modelle fest gestellt haben ist, wie wichtig die Datenqualität ist. Die Datenqualität ist unserer Meinung nach wichtiger als das Modellieren von DL oder ML Modellen. Beispielsweise wäre das Problem nicht aufgetaucht, hätte man die Messung Treppenlaufen klar deklariert, dass dazwischen sich Plateaus befinden. Man hätte sich deutlich mehr Zeit in der Aufnahme von Daten sich widmen sollen und diese auch zwischendruch zu überprüfen, ob die Einstellungen der Smartphones bei allen identisch ist. Auch haben wir festgestellt, dass man für die Deep Learning Modelle deutlich mehr Zeit einplanen sollte, da diese für das trainieren und evaluieren viel Zeit und Ressourcen in Anspruch nehmen. Auch für die entwickelte Web App sollte man sich davor schon gedanken machen, welches passende Framework geeigneter und einfacher zu implementieren ist. 
+
 
 ## Fazit / Schlussfolgerung
+
+Das Fazit unserer Challenge ist, dass die Datenqualität sehr wichtig ist und man sich mehr Zeit bei der Sammlung der Daten nehmen soll. Auch bei der Implementierung der Deep Learning Modelle emfphielt es sich generell mehr Zeit einzuplanen. Der Vergleich zwischen Deep Learning und Machine Learning hat uns gezeigt, dass Machine Learning Modelle einfacher zu implementieren und zu evaluieren sind, sich jedoch ein Tradeoff mit der Ziel Metrik einher.
+
+
+Die Sensor Based Activity Recognition hat uns viel Spass gemacht. Unserer Meinung nach einer der spannendsten Challenges die man im Studiengang Data Science haben kann. Einerseits ist man selber als Team Verantwortliche, wie gut die Datenqualität ist und andereseits deckt diese Challenge viele Aspekte von unterschiedlichen Modulen wie Data Wrangling, Explorative Datenanalyse, Grundkompetenz Machine Learning sowie Deep Learning ab. Wir schätzen es auch sehr, dass wir bei der Gestaltung und Entwicklung der Challenge offen und frei waren.
