@@ -74,7 +74,7 @@ Als Baseline Modell haben wir eine Logsitische Regression genommen, die mehrere 
 In Sklearn wird die multiclass Logistische Regression durch das One-vs-Rest-Schema (auch als One-vs-All-Schema bezeichnet) implementiert. Das bedeutet, dass die Logistische Regression für jede Klasse eine separate binäre Klassifikation durchführt, indem sie die eine Klasse gegen alle anderen Klassen klassifiziert. Das Ergebnis dieser binären Klassifikationen wird dann kombiniert, um die endgültige multiklassifizierte Vorhersage zu erzeugen.
 Beim Baseline Modell wurden die Rohdaten, sprich unverarbeitet eingelesen und der Datensatz aufgrund der niedrigsten Anzahl vorhandenem Bewegungsprofil gleichmässig gesampelt. Der Grund für diese Verarbeitung ist, dass wir als Optimierungsmetrik die Accuracy haben. Anschliessend wurden die Daten in Trainings und Validierungsdaten aufgesplittet in einem Verhältnis von 80:20. Anschliessend wurde das Logistische Modell trainiert und mittels den Validierungsdaten evaluiert, sprich die Accaurcy sowie die Konfusionsmatrix berechnet und geplottet. 
 
-![Alt text](image-3.png)
+![Alt text](images/image-3.png)
 
 
 ### Decision Tree
@@ -84,13 +84,13 @@ Alle Runs sind hier ersichtlich: [Decision Tree W&B](https://wandb.ai/fhnw-cdl1/
 Gesamthaft wurden 6101 Runs vom Decision Tree gemacht.    
 Der Beste Run den wir mit dem Decision Tree Classifier erreichen konnten.
 
-![Alt text](image-4.png)
+![Alt text](images/image-4.png)
 
 Wir erkennen bei der Konfusion Matrix deutlich, dass unser Decision Tree Treppenlaufen als Laufen prediziert. Eine mögliche Erklärung ist, dass beim Treppenlaufen Plateaus vorhanden waren und die Datenqualität von Treppenlaufen somit eine Mischung aus Treppenlaufen und Laufen besteht. 
 
 Vom besten Modell wurde eine Fehlerabschätzung der Metrik gemacht, dabei wird der Mittelwert und die Standardawbeichung der jeweiligen Metrik über dem Balken geplottet. Wir erkennen hier, dass unsere Accuracy Validation einen Mittelwert von 0.73 erreicht. 
 
-![Alt text](image-5.png)
+![Alt text](images/image-5.png)
 
 ### Random Forest
 
@@ -99,13 +99,13 @@ Ein erweiterte Ansatz vom Decision Tree Modell ist unser Random Forest Model. Au
 Alle Runs vom Random Forest Modell sind hier ersichtlich: [Random Forest W&B](https://wandb.ai/fhnw-cdl1/02-random-forest)   
 Gesmthaft wurden 3609 Random Forest Modelle erstellt und die höchste Accuracy die wir erreichen konnte lag bei 0.97.
 
-![Alt text](image-6.png)
+![Alt text](images/image-6.png)
 
 Die Vermutung, dass der Random Forest besser performd als Decision Tree sehen wir bei der Fehlerabschätzung.
 Hier konnten wir von unserem besten Random Forest Modell eine Accuracy Validation von 0.81 verzeichnen.   
 In der Confusion Matrix sehen wir, dass der Random Forest Velofahren als Treppenlaufen predicted. 
 
-![Alt text](image-7.png)
+![Alt text](images/image-7.png)
 
 Es ist auch hier, wie beim Decision Tree, stark zu erkännen, dass die Standardabweichung relativ gross ist bei den Validierungsdaten als beim Trainingsdatensatz. 
 
@@ -113,18 +113,18 @@ Es ist auch hier, wie beim Decision Tree, stark zu erkännen, dass die Standarda
 
 Ein weiter ML Ansatz den wir verfolgt haben war der Stochastic Gradient Descent Classifier. Analog wie beim Decision Tree und Random Forest, wurden die Hyperparameter Tuning ebenfalls in Weights & Bias gemacht. Die Laufzeit eines Run war dabei stark abhängig vom Split, so konnten nicht so viele Runs getätigt werden wie beim Decision Tree und Random Forest. Gesamthaft wurden 490 Runs gemacht, wobei der beste Run eine ähnliche hohe Accuracy, wie der Decision Tree erreichen konnte. 
 
-![Alt text](image-8.png)
+![Alt text](images/image-8.png)
 
 Bei der Fehlerabschätzung hat sich jedoch herausgestellt, dass der Stochastic Gradient Descent als schlechteste performt. 
 
-![Alt text](image-9.png)
+![Alt text](images/image-9.png)
 
 
 ### Vergleich der ML Modelle
 
 Vergleichen wir alle unsere Machine Learning Modelle mit den erreichten Metriken sowie deren Fehlerabschätzung, so hat unser Random Forest Modell am besten performd. 
 
-![Alt text](image-10.png)
+![Alt text](images/image-10.png)
 
 
 ### Weitere ML Ansätze
@@ -279,7 +279,7 @@ def create_model_1(name="model_1"):
 
 ### Klassifikations Matrix Bestes Modell:
 
-![Alt text](image.png)
+![Alt text](images/image.png)
 
 
 
@@ -287,8 +287,8 @@ def create_model_1(name="model_1"):
 ### Vergleich Deep Learning mit Machine Learning 
 Das Interessante ist, dass die Metriken wie Accuracy und Recall/Precision täuschen. Denn wie man hier erkenne kann:
 
-![Alt text](image-1.png)
-![Alt text](image-2.png)
+![Alt text](images/image-1.png)
+![Alt text](images/image-2.png)
 
 Ist das Modell 2 mit einer Trainingsgenauigkeit von 99,76% und einer Validierungsgenauigkeit von 99,70% in der Metrik höher als das beste Modell mit einer Validierungsgenauigkeit von 98,03% und einer Trainingsgenauigkeit von 98,08%?
 
