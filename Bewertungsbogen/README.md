@@ -31,37 +31,25 @@ Ein grosses ist Risiko ist die Qualität der Daten. Damit das Risiko von schlech
 
 ## Methodenkenntnisse und Transfer aus den Modulen
 
-### Kombiniert verschiedenste Methoden und Vorgehensweisen adäquat und effizient und/oder entwickelt neue Methoden oder Vorgehensweisen, die eine innovative Lösung der Aufgabe ermöglichen 
-
-
-### Vergleicht und beurteilt mehrere Methoden auf Basis von statistischen Tests (mehrfache Ausführung, Crossvalidation, Fehlerabschätzung der Experimente, zB t-test). Kann diese Tests richtig interpretieren 
-
-
-### Kennt Methoden, die nachgewiesenermassen State of the Art sind, und wendet mindestens eine Methode zur Lösung der Aufgaben an 
-
+Aus dem Wissen aus den Modulen Data Wrangling, Lineare und Logsitische Regression, Explorative Datenanalyse sowie Grundkompetenz Machine Learning konnten wir die verschiedensten Methoden aus diesen Modulen mit in die Challenge einfliessen lassen. Aus dem Modul Deep learning konnte zusätzlich der Umgang mit der MLOps Plattform Weights and Bias weiterentwickelt werden sowie mit dem Framework Tensorflow.  
+Weiter wurde im Verlaufe der Challenge erkannt, dass die Fehlerabschätzung der Metriken bzw. der Split von Train und Test sehr relevant ist für die Metriken. Im ML Notebook wurden durch Weights and Bias die Hyperparamter Optimiert und anschliessend vom besten Model deren Fehlerabschätzung. 
 
 ## Vorgehensweise und Experimentdesign (Ausführung eines Data Science Projektes)
 
-### Vergleicht Ergebnisse mit einem unterschiedlichen Baseline Ansatz 
-
-### Implementiert verschiedene Vergleichsalorithmen zur Lösung und Optimierung der Fragestellung
-
-### Vergleicht und beurteilt mehrere Modellansätze (Baseline, SotA1, SotA2) auf der Basis von statistischen Tests (mehrfache Ausführung, Crossvalidation, Fehlerabschätzung der Experimente, zB t-test). Kann diese Tests richtig interpretieren. 
+Die erstellten Modelle wurden jeweils mit einem Baseline Modell verglichen und anschliessend am Ende des Notebook auch visualisiert. Im ML Notebook wurden diverse Sklearn Klassizierungsalgorithmen genutzt und mit Weights and Bias integriert. Im DL Notebook wurden die Modelle mit Tensorflow erstellt und im Tensorboard visualisiert. 
 
 ## Code Struktur und Testing
 
-### Entwirft und implementiert die Pipeline, den Code und die Modellierung mit Fokus auf Effizienz 
-
-### Gebraucht objektorientierte und/oder funktionale Programmierung um den Code noch wartbarer, einfach zu erweitern und effizienter zu machen 
-
+Der Code ist jeweils im Notebook ersichtlich. Weiter wurden im Code zu den jeweiligen implementierten Funktionen eine kurze Beschreibung hinzugefügt. Auch im Markdown ist ersichtlich, warum wir welche Schritte machen. 
 # Dokumentation, Wissenschaftlichkeit, Reproduzierbarkeit
 
 ## Dokumentation der Arbeit
 
-### Dokumentiert in einer Art und Weise, dass die Lösung von fachlichen bzw nicht-fachlichen Personen installiert und genutzt werden kann 
-
+Die Dokumentation der Arbeit wurde mit dem Challenge-Owner am Anfang abgesprochen, dass diese im Markdown zu den jeweiligen Repos gemacht werden. Weiter haben wir als Team ein Separates Repository erstellt, welches die Dokumentation der Challenge erleichtert. Vorzugsweise wurde in den Notebooks im Markdown jeweils dokumentiert. Somit haben wir die Mögichkeit, bei der Dokumentation auf die bestimmten Notebooks zu verweisen.
 
 ## Analyse und Evaluation von Strategie, Methoden und Resultaten
+
+
 
 ### Diskutiert Evaluationsmethoden und daraus erhaltene Resultate 
 
@@ -70,132 +58,73 @@ Ein grosses ist Risiko ist die Qualität der Daten. Damit das Risiko von schlech
 
 ## Code Dokumentation und Versionierung
 
-### Dokumentiert den Code vollständig, adäquat und adressatengerecht und verwendet eine Lösung zur automatischen Erstellung einer Dokumentation 
-
-### Dokumentiert den Bezug zwischen Code (Architektur) und/oder Software-Architektur
-
-### Verwendet Pull-requests, Code Reviews, Kommentare und andere fortgeschrittene Techniken des Git Repositories 
+Der Code wir durch git vollständig versioniert und ist somit ersichtlich, wer was wann geändert hat. 
+Das Arbeiten mit Branches war nicht notwendig, wurde aber ab und zu gemacht, wenn Vorort am gleichen Notebook gearbeitet wurde.
 
 ## Reproduzierbarkeit und Deployment
 
-### Verwendet ein Framework für Reproduzierbarkeit der Experimente (zB mlflow oder Experiment Beaconing, Weight&Biases) 
-
-### Beschreibt und strukturiert das Projekt so, dass alle Experimente, insbesondere Machine Learning Experimente, reproduzierbar sind und die erarbeitete Lösung einfach zu benutzen ist (zB Dockerized) 
-
-### Trennt Artefakte und Modelle nach Development, Test, Production 
+Die Reproduzierbarkeit ist durch Weights and Bias, insbesondere bei den Machine Learning Experimente, gegeben. Sowohl der Randomstate für den Split, wie auch für das Modell wurden mit geloggt, um das Model zu reproduzieren. Auch das Deployment der App ist in den jeweiligen Repository ersichtlich.
 
 # Allgemeines Projektmanagement
 
 ## Methodenwahl, Dokumentation und Evaluation
 
-### Wählt eine passende Projektmanagement- Methode oder kombiniert Teile verschiedener Methoden und kann diese Kombination kritisch erklären und begründen 
-
-### Hinterfragt kontinuierlich das Vorgehen, passt es situativ an und setzt permanent Massnahmen zur Verbesserung der gemeinsamen Arbeit um. 
-
+Als Team haben wir uns geeinigt eine abgespeckte Scrum Variante zu verwenden. Dabei als Zentraler Aspekt ist das Kanban-Board, welches eine einfache Handhabung der Aufgabenaufteilung uns ermöglicht. Wöchentliche Hybride Sitzungen im Teams wurden abgehalten, um den Fortschritt zu besprechen und die nächsten Schritte zu planen. Bei Problemen wurde diese direkt via im erstellten Whatsapp Chat kommuniziert. Wichtig dabei waren für uns das Scrum-Value Transparency und Openess, welches wir auch in der Challenge ausgelebt haben. 
 
 ## Planung des Projektes
 
-### Kennt und nutzt unterschiedliche Methoden zur Aufwandschätzung von Aufgaben 
-
+Die Aufgaben wurden im Taskboard zu kleineren Aufgaben heruntergebrochen, um den Aufwand von einzelnen in Grenzen zu halten. Damit man geauer weiss, was die anderen und man selbst zu tun hat, wurden Tickets jeweils in den Sitzungen den Teammitglieder zugewiesen und mit T-Shirt Label Size versehen, um den Aufwand besser abschätzen zu können. Weiter wurden die Tickets mit einem jeweiligen Label des bestimmten Repository versehen, um die Übersicht zu behalten.
 
 ## Durchführung des Projektes
 
-### Nutzt das Planungstool professionell und umfassend 
-
-### Nutzt verschiedene Reports zur Überprüfung des Projektes (zB Burndown, Velocity) 
-
-### Geht konstruktiv mit unstrukturierten Situationen um und passt die Planung bei neuen Erkenntnissen an 
-
-### Reagiert sofort bei eingetroffenen Risiken, passt gegebenenfalls das Projektziel an und kommuniziert dies den Interessenvertretern 
-
+Siehe Kanban Board.
 
 ## Wissenserwerb als Projektaufgabe
 
-### Organisiert im Team explizit Formate für den Wissenstransfer 
-
-### Bewahrt und organisiert das für die Lösung der Aufgabe notwendige Wissen ein, in einer systematischen und nachhaltigen Form (zB mit Beschreibung des Inhaltes, Relevanz für die Aufgabe), sodass sich neue Personen rasch und gut in die Aufgabe einarbeiten könnten. 
-
+Damit ein Wissenserwerb unter den Teammitglieder gesichert ist, wurde einerseits das Repository Domaenenverstaendniss am Anfang des Projektes erstellt. Weiter haben wir uns im Verlaufe der Challenge uns drei mal vorort getroffen und uns den ganzen Tag der Challenge gewidmet sowie Fragn untereinander geklärt. Die Organisation ist dabei so Aufgebaut, dass man diese an eine weitere Gruppe weiter geben könnte, und diese durch eine kurze Einfürhung Wissen, wo sie ansetzen müssten. 
 
 # Kommunikation und Zusammenarbeit
 
 ## Kommunikation und Zusammenarbeit mit Beteiligten (Kunden, Owner, Coaches, etc) für einzelne Studierende oder Teams
 
-### Kommuniziert höflich, klar, mit Fachkompetenz und lösungsorientiert 
-
-### bereitet Meetings so vor, dass diese effizient, zielorientiert und in einem angenehmen Klima stattfinden können 
-
-### Bespricht beziehungsweise erarbeitet mögliche Lösungen und Vorgehensweisen mit den Beteiligten und passt gegebenenfalls die Lösungsstrategie und Methoden an 
-
+Die Kommunikation erfolgte via Teams mit dem Challenge-Owner. Es wurde immer im Vorfeld zuerst eine Nachricht geschrieben, dass man gerne eine Sitzung haben möchte, um Terminkolissionen mit anderen Teams zu vermeiden, bzw auch andere Teams und den Challenge-Owner zu informieren. Die Kommunikation mit dem Challenge-Owner fand immer höflich statt und Feedback von ihm wurde immer ernst genommen und versucht umzugesetzten. (Bsp. Beachten von Data Leakage, Fehlerabschätzung der Metriken etc...)
 
 ## Präsentationen (mündlich und schriftlich) von Zwischen- resultaten und Endresultaten
 
-### Die Präsentation ist prägnant und abwechslungsreich und wird souverän vorgetragen 
+Zwischen Resultate wurden jeweils in den Sitzungen mit dem Challenge-Owner besprochen. Die Endresultate werden in der Verteidigung vorgestellt. Es wurde sichergestelt, dass der Challenge-Owner Zugriff auf die Organisation hat und sich somit zu jeder Zeit ein Bild vom Fortschritt machen konnte.
 
 
 ## Kommunikation im Team
 
-### Ermöglicht effektive Meetings durch überzeugende Kommunikation von alternativen Lösungen und Vorgehensweisen 
-
-### Bindet alle Teammitglieder ein und bewirkt, dass sich jede/r beteiligen kann 
-
-### Sorgt dafür, dass Erkenntnisse aus der Teamarbeit dokumentiert werden und für andere/für spätere Projekte zur Verfügung stehen 
-
+Die Kommunikation im Team erfolgte jeden Dienstag Hybrid von 1100 bis 1200, dabei wichtig war es uns, dass jeder zu Wort kommt und seine aktuellen Probleme, Sorgen den anderen Team Mitglieder mitteilen konnte. Somit konnte man alternative Lösungen und Ideen gemeinsam besprechen und umsetzen. 
+Bei Kleinigkeiten wurde via Whatsapp kommuniziert, dazu gehörten, Terminabsagen, Krankheit, etc...
 
 ## Zusammenarbeit im Team
 
-### Verbessert die Arbeiten anderer Teammitglieder durch konstruktives und lösungsorientiertes Feedback, bindet selbst solches in seine Arbeiten ein und berücksichtigt andere Meinungen. Stellt die Erfüllung der Aufgabe über den eigenen Beitrag 
-
-### Erkennt aufkommende Konflikte, spricht sie an und trägt zu ihrer Lösung bei, so dass die Zusammenarbeit effizient und konstruktiv weitergeführt werden kann 
-
-
+Die Zusammenarbeit im Team lief nicht immer rund, da andere Module im Studiengang unerwartet viel Zeit fressten. Jedoch haben wir uns immer gegenseitig unterstützt und versucht, dass jeder sein Teil zur Challenge beitragen konnte.
 # Kreativität und kritisches Denken
 
 ## Kreativität und innovatives Denken
 
-### Nimmt das Problem auf verschiedene Weise wahr oder nähert sich ihm auf unterschiedliche Weise. Listet viele Ideen und Antworten auf 
-
-### Berücksichtigt ungewöhnliche Ansätze oder hat eigene, neue Ideen oder kombiniert Ideen auf neue Weise, die über die Vorgaben der Aufgabe hinausgehen 
-
-### Entwickelt nach einer Auswahl von Alternativen einen logischen, konsistenten Plan zur Lösung des Problems 
-
-
+In Deep Learning wurden die verschiedenen Kreative Ideen jeweils in Form von einem Notebook dokumentiert. Ein Beispiel ist, das hinzufügen von Noise zu den Daten, um diese generalisierbarer auf neue Daten zu machen. 
+ 
 ## Kritisches Denken und Handeln
 
-### Legt die Fragestellung oder dafür erhaltene oder recherchierte Informatione in eigenen Worten klar dar und beschreibt sie umfassend, liefert die dazu nötigen Informationen und erstellt eine eigene kritische Analyse 
-
-### Hinterfragt die Standpunkte der Experten, eigene und fremde Annahmen kritisch. Zieht andere Perspektiven oder Hypothesen mit ein. 
-
-### Bewertet die eigenen Ergebnisse und Schlussfolgerungen im Kontext der Fragestellung und relevanter Informationen logisch, kritisch und umfassend 
-
+Die ML und DL Modelle wurden jeweils am Ende des Notebooks dokumentiert. Code welches nicht funktionierte wurde ebenfalls dokumentiert und recherche betrieben warum diese so ist. Bsp. die Runtime von KNNClassifier zu lange war. 
 # Professionalität und Reflexionsfähigkeit
 
 ## Zuverlässigkeit, Eigeninitiative und Motivation
 
-### hält Besprechungs- und Abgabetermine ein und hält sich zuverlässig an Vereinbarungen im Team oder mit anderen Beteiligten 
-
-### erfüllt die zugeteilten Aufgaben proaktiv, leistet einen wesentlichen eigenen Beitrag und nutzt die Gelegenheit, Neues zu lernen und anzuwenden 
-
-### Protokolliert die eigene Arbeit in einer Art und Weise, dass er daraus Schlüsse für zukünftige Arbeiten ziehen kann (siehe Reflexionsfähigkeit) 
-
-### erarbeitet ein Thema gründlich und interessiert
+Die Abgabetermine wurden mit dem Challenge-Owner immer eingehalten. Auch im Team wurden die mündlichen Vereinaberungen umgesetzt. 
 
 ## Lernbereitschaft
 
-### Erkennt eigene Wissenslücken und füllt sie selbstständig und proaktiv 
-
-### Erkennt Probleme rechtzeitig, kann sie klar formulieren und sucht zu deren Lösung passende Hilfe (Team, Studierende, Coach, Kunde, FE) 
-
+Jedes Team Mitglied ist selbständig dafür Verantwortlich das Wissen aufzubauen. Um diese einfacher zu gestalten, existiert das Domaenwissen Repository. 
 
 
 ## Reflexionsfähigkeit
 
-### Reflektiert die geleistete Arbeit, den eigenen Beitrag, neu Gelerntes und mögliche Verbesserungen 
-
-### geht konstruktiv mit eigenen Fehlern um: anerkennt eigene Fehler und sieht sie als Lerngelegenheit 
-
-### Arbeitet transparent, so dass er/sie Feedback erhalten und in einen Austausch treten kann
-
-### Erkennt den Nutzen von Feedback, kann Feedback systematisch abholen und in die Arbeit integrieren 
+Es gibt durchaus viel potential sich zu verbessern. Dabei gehört zum einen die Code Redundanz im ML-Notebook und DL-Notebook. Es wurde versucht das Feedback vom Challenge-Owner umzusetzen. Bsp die Fehlerabschätzung der Metriken wurde umgesetzt. 
 
 # Aufgabenspezifische Lernziele				
 
@@ -203,24 +132,47 @@ Ein grosses ist Risiko ist die Qualität der Daten. Damit das Risiko von schlech
 
 ### Erstellt ein Konzept zur Datensammlung 
 
+Das Konzept ist [hier](../Datenerhebung/README.md) zu finden.
+
 ### Führt die Datensammlung so aus, dass die Datenqualität stimmt
+
+Für die Datensammlung und die Qualität der Daten war jede beteiligte Person der Challenge selbst verantwortlich dafür. Es hat sich jedoch herausgestellt, dass die Datenqualität stark vom Smartphone abhängt (Apple vs. Andoid).   
 
 ### Prüft die Qualität der Daten
 
+Die Datenqualität wird dabei im folgenden Repository genauer unter die Lupe genommen. [Data-Wrangling-EDA](../../Sensor_Data-Wrangling-und-EDA)
+
 ### Speichert die Daten in geeigneter Form und kann die Wahl begründen
+
+Die Daten wurden in einem CSV-Format gespeichert und im Picoshare ebenfalls abgelegt. Im Nachinein wäre ein Parquet-Format besser gewesen, da dieses komprimiert ist und somit weniger Speicherplatz benötigt.
 
 ## Modellierung
 
 ### Es werden verschiede Modellideen getestet, mindestens aber:, Ein Modell zur Klassifizierung ohne Deep Learning, Ein Modell zur Klassifizierung mit Deep Learning
 
+Es wurden verschiedene Modelle getestet. 
+
+[Klassifierzung ohne Deep Learning](../../Sensor_Klassifikation-ohne-Deep-Learning)
+
+[Klassifizierung mit Deep Learning](../../Sensor_Klassifikation-mit-Deep-Learning)
+
 ### Vergleich und Beurteilung der verschiedenen Modellansätze werden festgehalten
+
+Der Vergleich von Modellen ist im jeweiligen Notebook ersichtlich. 
+
+Der Vergleich von ML und DL modelle ist im ReadMe unter dem Abschnitt "Vergleich Machine Learning und Deep Learning" ersichtlicht.
+
 
 ### Auch negative Ergebnisse werden dokumentiert
 
+Negative Ergebenisse wurden im Notebook nicht entfernt. Siehe Im ML-Notebook unter dem Abschnitt "Weitere Versuche" und im DL den Folder "DL-Experimente". 
 
 ## Präsentation
 
 ### Es werden folgende Punkte in der Präsentation besprochen: Aufgabenstellung und Vorgehen, Modelle, Modellevaluation, Lessons learnt
 
+...
+
 ### Die Präsentation ist nachvollziehbar und hat einen roten Faden. (Story-telling)
 
+...
