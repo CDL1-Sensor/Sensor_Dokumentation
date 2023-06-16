@@ -74,19 +74,65 @@ Als Baseline Modell haben wir eine Logsitische Regression genommen, die mehrere 
 In Sklearn wird die multiclass Logistische Regression durch das One-vs-Rest-Schema (auch als One-vs-All-Schema bezeichnet) implementiert. Das bedeutet, dass die Logistische Regression für jede Klasse eine separate binäre Klassifikation durchführt, indem sie die eine Klasse gegen alle anderen Klassen klassifiziert. Das Ergebnis dieser binären Klassifikationen wird dann kombiniert, um die endgültige multiklassifizierte Vorhersage zu erzeugen.
 Beim Baseline Modell wurden die Rohdaten, sprich unverarbeitet eingelesen und der Datensatz aufgrund der niedrigsten Anzahl vorhandenem Bewegungsprofil gleichmässig gesampelt. Der Grund für diese Verarbeitung ist, dass wir als Optimierungsmetrik die Accuracy haben. Anschliessend wurden die Daten in Trainings und Validierungsdaten aufgesplittet in einem Verhältnis von 80:20. Anschliessend wurde das Logistische Modell trainiert und mittels den Validierungsdaten evaluiert, sprich die Accaurcy sowie die Konfusionsmatrix berechnet und geplottet. 
 
-(Plots und Bilder vom Notebook hinzufuegen)
+![Alt text](image-3.png)
 
 
-- Decision Tree
+### Decision Tree
 
-Für das Random Forest-Modell wurden verschiedene Modellparameter untersucht und optimiert. Mithilfe von Weights and Bias wurden insgesamt 3609 Modelle trainiert, indem verschiedene Kombinationen von Parametern traniert wurden. Durch verschiedene Kürzungen und Anpassungen wurde das beste Modell ausgewählt. Dabei stellte sich heraus, dass auch das beste Modell des Random Forest stark vom Random State abhängig ist. Trotz dieser Abhängigkeit wurde es als eines der besten Modelle identifiziert.
+Unser erstes Machine Learning Modell ist ein Decision Tree Classifier. Damit wir das trainieren der Modelle verfolgen konnten, haben wir die Hyperparamater Tuning sowie Cross Validation mit Weights and Bias durchgeführt. Dabei haben wir verschiedene Parameterkombinationen des Decision Tree sowie auch das Under- und Oversampling ausprobiert und haben dabei festgestellt, dass die Accuracy bzw. alle Metriken stark vom Train Test Split abhängen. Anschliessend haben wir die besten Hyperparameter genommen und diese mehrmals mit unterschiedlichen random_state Split von Train und Test trainiert und konnten somit eine Fehlerabschätzung der Metriken berechnen.  
+Alle Runs sind hier ersichtlich: [Decision Tree W&B](https://wandb.ai/fhnw-cdl1/01-decision-tree)   
+Gesamthaft wurden 6101 Runs vom Decision Tree gemacht.    
+Der Beste Run den wir mit dem Decision Tree Classifier erreichen konnten.
 
-Ähnlich wie bei den anderen Modellen wurde auch hier die Konfusionsmatrix berechnet und geplottet, um eine bessere Übersicht über die Leistung des Modells zu erhalten.
-TODO: Bild von Konfusionmatrix rein.
+![Alt text](image-4.png)
+
+Wir erkennen bei der Konfusion Matrix deutlich, dass unser Decision Tree Treppenlaufen als Laufen prediziert. Eine mögliche Erklärung ist, dass beim Treppenlaufen Plateaus vorhanden waren und die Datenqualität von Treppenlaufen somit eine Mischung aus Treppenlaufen und Laufen besteht. 
+
+Vom besten Modell wurde eine Fehlerabschätzung der Metrik gemacht, dabei wird der Mittelwert und die Standardawbeichung der jeweiligen Metrik über dem Balken geplottet. Wir erkennen hier, dass unsere Accuracy Validation einen Mittelwert von 0.73 erreicht. 
+
+![Alt text](image-5.png)
+
+### Random Forest
+
+Ein erweiterte Ansatz vom Decision Tree Modell ist unser Random Forest Model. Auch beim Random Forest haben wir die Hyperparameter Tuning sowie Cross Validation mit Weights and Bias durchgeführt und auch hier festgestellt, dass der Split von Train und Test einen grossen Einfluss hat. Beim Random Forest konnten wir tendenziell bessere Scores verzeichnen als beim Decision Tree. 
+
+Alle Runs vom Random Forest Modell sind hier ersichtlich: [Random Forest W&B](https://wandb.ai/fhnw-cdl1/02-random-forest)   
+Gesmthaft wurden 3609 Random Forest Modelle erstellt und die höchste Accuracy die wir erreichen konnte lag bei 0.97.
+
+![Alt text](image-6.png)
+
+Die Vermutung, dass der Random Forest besser performd als Decision Tree sehen wir bei der Fehlerabschätzung.
+Hier konnten wir von unserem besten Random Forest Modell eine Accuracy Validation von 0.81 verzeichnen.   
+In der Confusion Matrix sehen wir, dass der Random Forest Velofahren als Treppenlaufen predicted. 
+
+![Alt text](image-7.png)
+
+Es ist auch hier, wie beim Decision Tree, stark zu erkännen, dass die Standardabweichung relativ gross ist bei den Validierungsdaten als beim Trainingsdatensatz. 
+
+### Stochastic Gradient Descent
+
+Ein weiter ML Ansatz den wir verfolgt haben war der Stochastic Gradient Descent Classifier. Analog wie beim Decision Tree und Random Forest, wurden die Hyperparameter Tuning ebenfalls in Weights & Bias gemacht. Die Laufzeit eines Run war dabei stark abhängig vom Split, so konnten nicht so viele Runs getätigt werden wie beim Decision Tree und Random Forest. Gesamthaft wurden 490 Runs gemacht, wobei der beste Run eine ähnliche hohe Accuracy, wie der Decision Tree erreichen konnte. 
+
+![Alt text](image-8.png)
+
+Bei der Fehlerabschätzung hat sich jedoch herausgestellt, dass der Stochastic Gradient Descent als schlechteste performt. 
+
+![Alt text](image-9.png)
+
+
+### Vergleich der ML Modelle
+
+Vergleichen wir alle unsere Machine Learning Modelle mit den erreichten Metriken sowie deren Fehlerabschätzung, so hat unser Random Forest Modell am besten performd. 
+
+![Alt text](image-10.png)
+
+
+### Weitere ML Ansätze
+
+Weitere fehlgeschalegene ML Ansätze die wir ebenfalls versucht haben waren:
 
 - KNN 
-- Kluster Algorithmen (K-Means, Dbscan)
-- Neuronale Netze
+- SVM
 
 
 ## Deep Learning Modelle
