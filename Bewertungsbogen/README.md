@@ -55,7 +55,8 @@ Die Hyperparameteroptimierung und Cross-Validation wurden jeweils ebenfalls mit 
 ## Code Dokumentation und Versionierung
 
 Der Code wir durch git vollständig versioniert und ist somit ersichtlich, wer was wann geändert hat. 
-Das Arbeiten mit Branches war nicht notwendig, wurde aber ab und zu gemacht, wenn Vorort am gleichen Notebook gearbeitet wurde.
+Das Arbeiten mit Branches wurde nur gemacht, wo es von nöten war. Sprich wenn mehrere Personen gleichzeitig an einem Repository gearbeitet haben. 
+Ebenfalls wurden entsprechend dort wo nötig dann Pull Request mit Reviews gemacht, bevor diese ins Main gemerged wurden. Generell haben wir uns jedoch in den jeweiligen Wöchentlichen Sitzungen gegenseitig ausgetauscht, wie und wo der aktuelle Stand der Arbeit war. 
 
 ## Reproduzierbarkeit und Deployment
 
